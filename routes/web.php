@@ -23,6 +23,24 @@ Route::resource('mhs','MahasiswaController');
 // Only authenticated users may enter...
 // })->middleware('auth');
 
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('/admin')->group(function(){
+//Login
+RoutesRoute::get('/login','Auth\LoginController@showAdminLogi nForm')->name('admin.login');
+Route::post('/login','Auth\LoginController@adminLogin')->name('admin.login.submit'); Route::post('/logout','Auth\LoginController@logout')->name('admin.logout');
+
+//Register Routes
+Route::get('/register','Auth\RegisterController@showAdminRegisterForm')->name('admin.register'); Route::post('/register','Auth\RegisterController@createAdmin')->name('admin.register.submit');
+ 
+
+
+
+});
+ 
+// Dashboard Routes
+Route::get('/dashboard','Admin\HomeController@index')->name('admin.home');

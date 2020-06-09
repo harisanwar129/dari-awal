@@ -37,7 +37,33 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
     }
+    public function showAdminLoginForm()
+    {
+    return view('auth.login', ['url' => 'admin']);
+    }
+
+    public function adminLogin(Request $req)
+    {
+
+    if (Auth::guard('admin')->attempt(['username' => $req->username, 'password' => $req->password])) {
+    return redirect()->intended(route('admin.home'))->with('status', 'Login Success');
+    }
+
+    return back()->with('status', 'Username dan Password');
+
+    }
+
+    public function logout(Request $req)
+    {
+    if ($req->guard == 'admin') { Auth::guard('admin')->logout(); return redirect('admin/login');
+    } else {
+    Auth::guard()->logout();
+    return redirect('login');
+    }
+    }
+
     public function username()
     {
     return 'username';
