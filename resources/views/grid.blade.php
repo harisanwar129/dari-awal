@@ -127,10 +127,27 @@ label">Kelas</label>
       </div>
     </div>
   </form>-->
-<a class="btn btn-default" href="#" role="button">Link</a>
+
+<!--<a class="btn btn-default" href="#" role="button">Link</a>
    <button class="btn btn-primary" type="button">Button</button>
    <input class="btn btn-success" type="button" value="Input">
-   <input class="btn btn-danger" type="submit" value="Submit">
+   <input class="btn btn-danger" type="submit" value="Submit">-->
+
+   <!--<h2>Nav Tasb</h2>
+ <ul class="nav nav-tabs">
+       <li role="presentation" class="active"><a href="#">Home</a></li>
+       <li role="presentation"><a href="#">Profile</a></li>
+       <li role="presentation"><a href="#">Messages</a></li>
+   </ul>-->
+    <h2>Nav Justified</h2>
+  <ul class="nav nav-pills nav-justified">
+        <li role="presentation" class="active"><a
+   href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+       <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

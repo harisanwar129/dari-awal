@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');  
 });
 
-
-Route::get('boostrap','MainController@grid');
+Route::resource('mhs','MahasiswaController');
+// Route::get('boostrap','MainController@grid');
