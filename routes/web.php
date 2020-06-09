@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 Route::resource('mhs','MahasiswaController');
 // Route::get('boostrap','MainController@grid');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
